@@ -1,0 +1,28 @@
+{
+  "name": "studioband",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc && electron ./dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lait-Ahh/StudioBand.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lait-Ahh/StudioBand/issues"
+  },
+  "homepage": "https://github.com/Lait-Ahh/StudioBand#readme",
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}
