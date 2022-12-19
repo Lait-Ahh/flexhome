@@ -8,7 +8,6 @@ function createWindow() {
             preload: path.join(__dirname + '/preload.js')
         }
     });
-
     const menu = Menu.buildFromTemplate([
         {
             label: 'Fichier',
@@ -41,7 +40,10 @@ function createWindow() {
                 },
                 {
                     label: 'Fermer la fenêtre',
-                    sublabel: 'Alt+F4'
+                    sublabel: 'Alt+F4',
+                    click: () => {
+                        app.exit();
+                    }
                 }
             ]
         },
@@ -77,23 +79,35 @@ function createWindow() {
             label: 'Préférences',
             submenu: [
                 {
-                    label: 'Paramètres MIDI'
+                    label: 'Paramètres MIDI',
+                    click: () => {
+                        mainWindow.webContents.send('open-modal', 'midi-settings');
+                    }
                 },
                 {
-                    label: 'Paramètres audios'
+                    label: 'Paramètres audios',
+                    click: () => {
+                        mainWindow.webContents.send('open-modal', 'audio-settings');
+                    }
                 },
                 {
-                    label: 'Paramètres généraux'
+                    label: 'Paramètres généraux',
+                    click: () => {
+                        mainWindow.webContents.send('open-modal', 'general-settings');
+                    }
                 },
                 {
-                    label: 'Paramètres du projet'
+                    label: 'Paramètres du projet',
+                    click: () => {
+                        mainWindow.webContents.send('open-modal', 'project-settings');
+                    }
                 }
             ]
         }
     ]);
-
     mainWindow.setMenu(menu);
     mainWindow.loadFile(path.join(__dirname + '/../index.html'));
+    mainWindow.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {
