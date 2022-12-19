@@ -3,9 +3,10 @@ import * as path from 'path';
 
 function createWindow() {
     const mainWindow = new BrowserWindow({
+        autoHideMenuBar: true,
         webPreferences: {
             nodeIntegration: true,
-            preload: path.join(__dirname + 'preload.js')
+            preload: path.join(__dirname + '/preload.js')
         }
     });
     mainWindow.loadFile(path.join(__dirname + '/../index.html'));
