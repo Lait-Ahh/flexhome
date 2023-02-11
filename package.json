@@ -1,0 +1,21 @@
+{
+  "name": "flexhome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lait-Ahh/flexhome.git"
+  },
+  "keywords": [],
+  "author": "Lait-Ahh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lait-Ahh/flexhome/issues"
+  },
+  "homepage": "https://github.com/Lait-Ahh/flexhome#readme"
+}
